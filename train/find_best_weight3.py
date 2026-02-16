@@ -48,13 +48,13 @@ def main():
     labels = np.arange(len(REQUIRED))
 
     # ----- LOAD -----
-    oof_cat_raw = np.load("result7(559)/oof_proba_cat.npy")
-    oof_lgb_raw = np.load("result7(559)/oof_proba_lgbm.npy")
-    oof_third_raw = np.load("result7(559)/oof_proba_hgb_ms_ts.npy")  # <-- поменяй имя
+    oof_cat_raw = np.load("result8(5515)/oof_proba_cat.npy")
+    oof_lgb_raw = np.load("result8(5515)/oof_proba_lgbm_ens.npy")
+    oof_third_raw = np.load("result8(5515)/oof_proba_hgb_ms_ts.npy")  # <-- поменяй имя
 
-    oof_cat = align_proba_to_required(oof_cat_raw, "result7(559)/label_mapping_cat.csv")
-    oof_lgb = align_proba_to_required(oof_lgb_raw, "result7(559)/label_mapping_lgbm.csv")
-    oof_third = align_proba_to_required(oof_third_raw, "result7(559)/label_mapping_hgb_ms_ts.csv")  # <-- поменяй имя
+    oof_cat = align_proba_to_required(oof_cat_raw, "result8(5515)/label_mapping_cat.csv")
+    oof_lgb = align_proba_to_required(oof_lgb_raw, "result8(5515)/label_mapping_lgbm.csv")
+    oof_third = align_proba_to_required(oof_third_raw, "result8(5515)/label_mapping_hgb_ms_ts.csv")  # <-- поменяй имя
 
     # ----- SINGLE MODEL SCORES -----
     ll_cat = log_loss(y, oof_cat, labels=labels)

@@ -83,16 +83,22 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
 
             iterations=5000,
             learning_rate=0.03,
-            depth=8,
+            depth=6,
 
-            l2_leaf_reg=8.0,
+            l2_leaf_reg=15.0,
+            min_data_in_leaf=20,
+
+            bootstrap_type="Bayesian",
+            bagging_temperature=1.0,
+            random_strength=1.5,
+
 
             random_seed=seed,
 
             od_type="Iter",
             od_wait=200,
 
-            task_type="CPU",
+            task_type="GPU",
             thread_count=-1,
 
             verbose=200,
@@ -110,14 +116,15 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
 
         oof[va_idx] = va_proba
 
-        ll = log_loss(y_va, va_proba)
+        ll = log_loss(y_va, va_proba, labels=np.arange(n_classes))
+
         fold_ll.append(ll)
 
         print(f"[seed {seed} fold {fold}] logloss={ll:.5f}")
 
         test += model.predict_proba(X_test) / N_SPLITS
 
-    full_ll = log_loss(y, oof)
+    full_ll = log_loss(y, oof, labels=np.arange(n_classes))
 
     print(f"\nSEED {seed} CV logloss = {full_ll:.5f}")
 
@@ -154,6 +161,9 @@ def main():
             n_classes
         )
 
+        np.save(f"oof_seed_{seed}.npy", oof)
+        np.save(f"test_seed_{seed}.npy", test)
+
         oof_all += oof
         test_all += test
 
@@ -162,18 +172,19 @@ def main():
     oof_all /= len(SEEDS)
     test_all /= len(SEEDS)
 
-    final_ll = log_loss(y, oof_all)
+    final_ll = log_loss(y, oof_all, labels=np.arange(n_classes))
+
 
     print("\n========== FINAL ENSEMBLE ==========")
     print("seed scores:", seed_scores)
     print("final logloss:", final_ll)
 
     # save
-    np.save("oof_proba_cat.npy", oof_all)
-    np.save("test_proba_cat.npy", test_all)
+    np.save("result9(537)/oof_proba_cat.npy", oof_all)
+    np.save("result9(537)/test_proba_cat.npy", test_all)
 
     pd.DataFrame({"label": le.classes_}).to_csv(
-        "label_mapping_cat.csv",
+        "result9(537)/label_mapping_cat.csv",
         index=False
     )
 

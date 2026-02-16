@@ -197,9 +197,9 @@ def main():
         axis=1
     )
 
-    np.save("test_proba_cat.npy", test_proba)
-    np.save("oof_proba_cat.npy", oof_proba)
-    pd.DataFrame({"label": le.classes_}).to_csv("label_mapping_cat.csv", index=False)
+    np.save("result9(537)/test_proba_cat.npy", test_proba)
+    np.save("result9(537)/oof_proba_cat.npy", oof_proba)
+    pd.DataFrame({"label": le.classes_}).to_csv("result9(537)/label_mapping_cat.csv", index=False)
     sub.to_csv("submission_cat.csv", index=False)
 
     print("Saved: test_proba_cat.npy, oof_proba_cat.npy, label_mapping_cat.csv")

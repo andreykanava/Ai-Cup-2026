@@ -20,8 +20,8 @@ ID_COL = "track_id"
 N_SPLITS = 5
 BASE_RANDOM_STATE = 42
 
-MAPPING_PATH_PREFERRED = "result4(569)/label_mapping_cat.csv"
-MAPPING_PATH_OUT = "result7(559)/label_mapping_hgb_ms_ts.csv"
+MAPPING_PATH_PREFERRED = "result9(537)/label_mapping_cat.csv"
+MAPPING_PATH_OUT = "result9(537)/label_mapping_hgb_ms_ts.csv"
 
 REQUIRED = [
     "Clutter", "Cormorants", "Pigeons", "Ducks", "Geese",
@@ -183,6 +183,9 @@ def main():
         print(f"--- SEED {seed} OOF logloss: {seed_ll:.5f}")
         per_seed.append({"seed": seed, "oof_logloss": seed_ll})
 
+        np.save(f"hgb_seeds/oof_proba_hgb_seed{seed}.npy", oof)
+        np.save(f"hgb_seeds/test_proba_hgb_seed{seed}.npy", test)
+
         oof_avg += oof / len(SEEDS)
         test_avg += test / len(SEEDS)
 
@@ -201,10 +204,10 @@ def main():
     ts_ll = log_loss(y, oof_ts, labels=np.arange(n_classes))
     print(f"Temp-scaled AVG OOF logloss: {ts_ll:.5f}")
 
-    np.save("oof_proba_hgb_ms.npy", oof_avg)
-    np.save("test_proba_hgb_ms.npy", test_avg)
-    np.save("oof_proba_hgb_ms_ts.npy", oof_ts)
-    np.save("test_proba_hgb_ms_ts.npy", test_ts)
+    np.save("result9(537)/oof_proba_hgb_ms.npy", oof_avg)
+    np.save("result9(537)/test_proba_hgb_ms.npy", test_avg)
+    np.save("result9(537)/oof_proba_hgb_ms_ts.npy", oof_ts)
+    np.save("result9(537)/test_proba_hgb_ms_ts.npy", test_ts)
 
     pd.DataFrame(per_seed).to_csv("cv_metrics_hgb_ms.csv", index=False)
 

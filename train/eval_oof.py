@@ -14,7 +14,7 @@ le = LabelEncoder()
 y = le.fit_transform(y_raw)
 
 # load OOF predictions
-oof_cat = np.load("oof_proba_cat.npy")
+oof_cat = np.load("result9(537)/oof_proba_cat.npy")
 oof_lgb = np.load("oof_proba_lgbm.npy")
 
 # individual scores

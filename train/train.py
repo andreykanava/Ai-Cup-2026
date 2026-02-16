@@ -324,9 +324,9 @@ def main():
     print(f"logloss: {overall_ll:.5f}")
 
     # save final artifacts
-    np.save("oof_proba_lgbm_ens.npy", oof_ens)
-    np.save("test_proba_lgbm_ens.npy", test_ens)
-    pd.DataFrame({"label": classes}).to_csv("label_mapping_lgbm.csv", index=False)
+    np.save("result9(537)/oof_proba_lgbm_ens.npy", oof_ens)
+    np.save("result9(537)/test_proba_lgbm_ens.npy", test_ens)
+    pd.DataFrame({"label": classes}).to_csv("result9(537)/label_mapping_lgbm.csv", index=False)
 
     pd.DataFrame(all_metrics).to_csv(os.path.join(seed_dir, "metrics_all_seeds.csv"), index=False)
 

@@ -44,7 +44,7 @@ for t in np.linspace(0.6,1.4,401):   # шаг 0.002
 print("BEST t:", best[1], "OOF logloss:", best[0])
 
 test_t=temp(test, best[1])
-np.save("../out/result12(5266)/cat_files/test_proba_cat_temp.npy", test_t)
+np.save("../out/result12(5266) - overfit/cat_files/test_proba_cat_temp.npy", test_t)
 
 test_ids=pd.read_parquet(f"{DATA_DIR}/test_ids.parquet")[[ID_COL]]
 sub=pd.concat([test_ids, pd.DataFrame(test_t, columns=REQUIRED)], axis=1)

@@ -17,7 +17,7 @@ ID_COL = "track_id"
 
 N_SPLITS = 5
 
-SEEDS = [42, 1337, 2024, 777, 999]   # ensemble seeds
+SEEDS = [42]   # ensemble seeds
 
 
 def load_data():
@@ -82,8 +82,8 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
             loss_function="MultiClass",
             eval_metric="MultiClass",
 
-            iterations=8000,
-            learning_rate=0.01,
+            iterations=300,
+            learning_rate=0.03,
             depth=6,
 
             l2_leaf_reg=15.0,
@@ -93,12 +93,13 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
             bagging_temperature=1.0,
             random_strength=1.5,
 
+
             random_seed=seed,
 
             od_type="Iter",
             od_wait=200,
 
-            task_type="GPU",
+            task_type="CPU",
             thread_count=-1,
 
             verbose=200,
@@ -180,11 +181,11 @@ def main():
     print("final logloss:", final_ll)
 
     # save
-    np.save("../out/result12(5266)/cat_files/oof_proba_cat.npy", oof_all)
-    np.save("../out/result12(5266)/cat_files/test_proba_cat.npy", test_all)
+    np.save("../out/result12(5266) - overfit/cat_files/oof_proba_cat.npy", oof_all)
+    np.save("../out/result12(5266) - overfit/cat_files/test_proba_cat.npy", test_all)
 
     pd.DataFrame({"label": le.classes_}).to_csv(
-        "../out/result12(5266)/cat_files/label_mapping_cat.csv",
+        "../out/result12(5266) - overfit/cat_files/label_mapping_cat.csv",
         index=False
     )
 

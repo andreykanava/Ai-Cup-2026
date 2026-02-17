@@ -13,7 +13,7 @@ TARGET_COL = "bird_group"
 ID_COL = "track_id"
 
 SEEDS = [1, 42, 1337, 2026, 777]
-SEED_DIR = "../out/result12(5266)/lgbm_seeds"
+SEED_DIR = "../out/result12(5266) - overfit/lgbm_seeds"
 
 EPS = 1e-15
 

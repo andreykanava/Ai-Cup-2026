@@ -28,8 +28,8 @@ REQUIRED = [
 ]
 
 BASE_MODELS = [
-    ("cat", "out/result12(5266)/oof_proba_cat_temp.npy", "out/result12(5266)/test_proba_cat_temp.npy", "out/result12(5266)/label_mapping_cat_temp.csv"),
-    ("lgb", "out/result12(5266)/oof_proba_lgbm_weighted.npy", "out/result12(5266)/test_proba_lgbm_weighted.npy", "out/result12(5266)/label_mapping_lgbm.csv"),
+    ("cat", "out/result12(5266) - overfit/oof_proba_cat_temp.npy", "out/result12(5266) - overfit/test_proba_cat_temp.npy", "out/result12(5266) - overfit/label_mapping_cat_temp.csv"),
+    ("lgb", "out/result12(5266) - overfit/oof_proba_lgbm_weighted.npy", "out/result12(5266) - overfit/test_proba_lgbm_weighted.npy", "out/result12(5266) - overfit/label_mapping_lgbm.csv"),
 
 ]
 
@@ -342,7 +342,7 @@ def main():
     prefix = "best"
     save_outputs(test_ids, best_test, prefix=prefix)
 
-    with open("out/result12(5266)/report_best.json", "w", encoding="utf-8") as f:
+    with open("out/result12(5266) - overfit/report_best.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
     print("\nSaved:")

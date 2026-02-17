@@ -28,10 +28,8 @@ REQUIRED = [
 ]
 
 BASE_MODELS = [
-    ("cat", "result10(537)/oof_proba_cat_weighted.npy", "result10(537)/test_proba_cat_weighted.npy", "result10(537)/label_mapping_cat.csv"),
-    ("lgb", "result10(537)/oof_proba_lgbm_weighted.npy", "result10(537)/test_proba_lgbm_weighted.npy", "result10(537)/label_mapping_lgbm.csv"),
-    ("rf",  "result10(537)/oof_proba_hgb_weighted.npy",  "result10(537)/test_proba_hgb_weighted.npy",  "result10(537)/label_mapping_hgb_ms_ts.csv"),
-    ("xgb", "result_xgb_seedens/oof_proba_xgb_seedens.npy", "result_xgb_seedens/test_proba_xgb_seedens.npy", "result_xgb_seedens/label_mapping_xgb_seedens.csv"),
+    ("cat", "out/result12(5266)/oof_proba_cat_temp.npy", "out/result12(5266)/test_proba_cat_temp.npy", "out/result12(5266)/label_mapping_cat_temp.csv"),
+    ("lgb", "out/result12(5266)/oof_proba_lgbm_weighted.npy", "out/result12(5266)/test_proba_lgbm_weighted.npy", "out/result12(5266)/label_mapping_lgbm.csv"),
 
 ]
 
@@ -344,12 +342,12 @@ def main():
     prefix = "best"
     save_outputs(test_ids, best_test, prefix=prefix)
 
-    with open("out/result10(537)/report_best.json", "w", encoding="utf-8") as f:
+    with open("out/result12(5266)/report_best.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
     print("\nSaved:")
     print(" - best_test_proba.npy")
-    print(" - best_submission_proba.csv")
+    print(" - best_submission_proba_stack.csv")
     print(" - best_submission_label.csv")
     print(" - report_best.json")
 

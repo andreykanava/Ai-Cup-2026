@@ -37,18 +37,18 @@ def main():
 
     # --- load 3 models ---
     df_cat = load_proba(
-        "result9(537)/test_proba_cat_weighted.npy",
-        "result9(537)/label_mapping_cat.csv",
+        "out/result11(536)/result_cat_temp/test_proba_cat_temp.npy",
+        "out/result11(536)/result_cat_temp/label_mapping_cat_temp.csv",
     )
     df_lgb = load_proba(
-        "result9(537)/test_proba_lgbm_weighted.npy",
-        "result9(537)/label_mapping_lgbm.csv",
+        "out/result11(536)/test_proba_lgbm_weighted.npy",
+        "out/result11(536)/label_mapping_lgbm.csv",
     )
     # HGB temperature-scaled output from your script
     # (if you want raw instead, point to test_proba_hgb.npy + its mapping)
     df_hgb = load_proba(
-        "result9(537)/test_proba_hgb_weighted_ts.npy",
-        "result9(537)/label_mapping_hgb_ms_ts.csv",
+        "out/result11(536)/test_proba_hgb_weighted_ts.npy",
+        "out/result11(536)/label_mapping_hgb_ms_ts.csv",
     )
 
     # --- weighted blend ---

@@ -1,0 +1,10 @@
+kept,dropped
+alt_max,max_z
+alt_min,min_z
+bbox_area,bounding_box_area
+bearing_change_p90,"hd_turn_abs_p90,turn_p90"
+bearing_change_rate,"hd_turn_abs_mean,turn_rate_mean"
+hd_heading_circ_std,heading_std
+hd_heading_mean,heading_mean
+hd_turn_abs_std,turn_rate_std
+movement_efficiency,straightness_index

@@ -6,8 +6,8 @@ import numpy as np
 import pandas as pd
 
 
-TRAIN_PATH = "../../data/interim/train/train_11.parquet"
-TEST_PATH  = "../../data/interim/test/test_11.parquet"
+TRAIN_PATH = "../../data/interim/train/train_13.parquet"
+TEST_PATH  = "../../data/interim/test/test_13.parquet"
 
 TARGET_SPECIES = "bird_species"
 TARGET_GROUP   = "bird_group"

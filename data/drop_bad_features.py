@@ -46,6 +46,12 @@ DROP_LIST_MANUAL = [
     "turn_skew",
     "vertical_burst_ratio_p90",
     "z_range",
+    'feature',
+    'descent_episode_count',
+    'ix_hull_area_log',
+    'ix_turn_peak_vs_mean',
+    'rv_sign_changes',
+    'stop_ratio'
 ]
 
 

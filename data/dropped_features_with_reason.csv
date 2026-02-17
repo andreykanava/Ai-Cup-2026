@@ -1,0 +1,12 @@
+feature,reason
+bounding_box_area,duplicate
+hd_turn_abs_mean,duplicate
+hd_turn_abs_p90,duplicate
+heading_mean,duplicate
+heading_std,duplicate
+max_z,duplicate
+min_z,duplicate
+straightness_index,duplicate
+turn_p90,duplicate
+turn_rate_mean,duplicate
+turn_rate_std,duplicate

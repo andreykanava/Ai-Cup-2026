@@ -48,13 +48,13 @@ def main():
     labels = np.arange(len(REQUIRED))
 
     # ----- LOAD -----
-    oof_cat_raw = np.load("result9(537)/oof_proba_cat_weighted.npy")
-    oof_lgb_raw = np.load("result9(537)/oof_proba_lgbm_weighted.npy")
-    oof_third_raw = np.load("result9(537)/oof_proba_hgb_weighted_ts.npy")  # <-- поменяй имя
+    oof_cat_raw = np.load("result11(536)/result_cat_temp/oof_proba_cat_temp.npy")
+    oof_lgb_raw = np.load("result11(536)/oof_proba_lgbm_weighted.npy")
+    oof_third_raw = np.load("result_xgb_seedens/oof_proba_xgb_seedens.npy")  # <-- поменяй имя
 
-    oof_cat = align_proba_to_required(oof_cat_raw, "result9(537)/label_mapping_cat.csv")
-    oof_lgb = align_proba_to_required(oof_lgb_raw, "result9(537)/label_mapping_lgbm.csv")
-    oof_third = align_proba_to_required(oof_third_raw, "result9(537)/label_mapping_hgb_ms_ts.csv")  # <-- поменяй имя
+    oof_cat = align_proba_to_required(oof_cat_raw, "result11(536)/result_cat_temp/label_mapping_cat_temp.csv")
+    oof_lgb = align_proba_to_required(oof_lgb_raw, "result10(537)/label_mapping_lgbm.csv")
+    oof_third = align_proba_to_required(oof_third_raw, "result_xgb_seedens/label_mapping_xgb_seedens.csv")  # <-- поменяй имя
 
     # ----- SINGLE MODEL SCORES -----
     ll_cat = log_loss(y, oof_cat, labels=labels)

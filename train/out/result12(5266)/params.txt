@@ -1,0 +1,26 @@
+model = CatBoostClassifier(
+
+            loss_function="MultiClass",
+            eval_metric="MultiClass",
+
+            iterations=8000,
+            learning_rate=0.01,
+            depth=6,
+
+            l2_leaf_reg=15.0,
+            min_data_in_leaf=20,
+
+            bootstrap_type="Bayesian",
+            bagging_temperature=1.0,
+            random_strength=1.5,
+
+            random_seed=seed,
+
+            od_type="Iter",
+            od_wait=200,
+
+            task_type="GPU",
+            thread_count=-1,
+
+            verbose=200,
+        )

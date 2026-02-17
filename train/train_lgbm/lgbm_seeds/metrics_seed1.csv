@@ -1,2 +1,0 @@
-seed,n_splits,rare_classes,cv_acc_nonrare,cv_logloss_nonrare,best_iter_mean
-1,5,0,0.8035371011149558,0.6187202206376886,1008.6

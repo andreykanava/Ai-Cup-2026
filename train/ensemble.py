@@ -14,11 +14,11 @@ W_LGB = 1.0 - W_CAT
 
 test_ids = pd.read_parquet(f"{DATA_DIR}/test_ids.parquet")
 
-p_cat = np.load("result4(569)/test_proba_cat.npy")
-p_lgb = np.load("result4(569)/test_proba_lgbm.npy")
+p_cat = np.load("out/result12(5266)/test_proba_cat_temp.npy")
+p_lgb = np.load("out/result12(5266)/test_proba_lgbm_weighted.npy")
 
-cls_cat = pd.read_csv("out/result4(569)/label_mapping_cat.csv")["label"].astype(str).tolist()
-cls_lgb = pd.read_csv("out/result4(569)/label_mapping_lgbm.csv")["label"].astype(str).tolist()
+cls_cat = pd.read_csv("out/result12(5266)/label_mapping_cat_temp.csv")["label"].astype(str).tolist()
+cls_lgb = pd.read_csv("out/result12(5266)/label_mapping_lgbm.csv")["label"].astype(str).tolist()
 
 df_cat = pd.DataFrame(p_cat, columns=cls_cat)[REQUIRED]
 df_lgb = pd.DataFrame(p_lgb, columns=cls_lgb)[REQUIRED]

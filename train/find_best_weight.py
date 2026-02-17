@@ -38,11 +38,11 @@ def align_proba_to_required(proba: np.ndarray, mapping_csv: str) -> np.ndarray:
 def main():
     y = load_y_as_required_indices()
 
-    oof_cat_raw = np.load("result7(559)/oof_proba_cat.npy")
-    oof_lgb_raw = np.load("result7(559)/oof_proba_lgbm.npy")
+    oof_cat_raw = np.load("out/result12(5266)/oof_proba_cat_temp.npy")
+    oof_lgb_raw = np.load("out/result12(5266)/oof_proba_lgbm_weighted.npy")
 
-    oof_cat = align_proba_to_required(oof_cat_raw, "result7(559)/label_mapping_cat.csv")
-    oof_lgb = align_proba_to_required(oof_lgb_raw, "result7(559)/label_mapping_lgbm.csv")
+    oof_cat = align_proba_to_required(oof_cat_raw, "out/result12(5266)/label_mapping_cat_temp.csv")
+    oof_lgb = align_proba_to_required(oof_lgb_raw, "out/result12(5266)/label_mapping_lgbm.csv")
 
     ll_cat = log_loss(y, oof_cat, labels=np.arange(len(REQUIRED)))
     ll_lgb = log_loss(y, oof_lgb, labels=np.arange(len(REQUIRED)))

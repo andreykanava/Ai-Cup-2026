@@ -11,9 +11,9 @@ REQUIRED = [
 ]
 
 # ---- weights (set yours) ----
-W_CAT = 0.82
+W_CAT = 0.2
 W_LGB = 0.18
-W_HGB = 0.0  # e.g. 0.05..0.15 if it helps
+W_HGB = 0.62  # e.g. 0.05..0.15 if it helps
 
 # optional: auto-normalize weights to sum=1
 W_SUM = W_CAT + W_LGB + W_HGB
@@ -37,7 +37,7 @@ def main():
 
     # --- load 3 models ---
     df_cat = load_proba(
-        "out/result12/result_cat_temp/test_proba_cat_temp.npy",
+        "out/result11(536)/result_cat_temp/test_proba_cat_temp.npy",
         "out/result11(536)/result_cat_temp/label_mapping_cat_temp.csv",
     )
     df_lgb = load_proba(
@@ -47,8 +47,8 @@ def main():
     # HGB temperature-scaled output from your script
     # (if you want raw instead, point to test_proba_hgb.npy + its mapping)
     df_hgb = load_proba(
-        "out/result11(536)/test_proba_hgb_weighted_ts.npy",
-        "out/result11(536)/label_mapping_hgb_ms_ts.csv",
+        "out/result12(5266) - overfit/test_proba_cat_temp.npy",
+        "out/result12(5266) - overfit/label_mapping_cat_temp.csv",
     )
 
     # --- weighted blend ---
@@ -65,7 +65,7 @@ def main():
     sub = pd.DataFrame(p, columns=REQUIRED)
     sub.insert(0, ID_COL, test_ids[ID_COL].values)
 
-    out = "submission_ens_3modelsBEST.csv"
+    out = "submission_ens_cat+cat+lbg.csv"
     sub.to_csv(out, index=False)
 
     print("saved", out, "shape", sub.shape)

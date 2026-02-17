@@ -50,11 +50,11 @@ def main():
     # ----- LOAD -----
     oof_cat_raw = np.load("out/result11(536)/result_cat_temp/oof_proba_cat_temp.npy")
     oof_lgb_raw = np.load("out/result11(536)/oof_proba_lgbm_weighted.npy")
-    oof_third_raw = np.load("out/result11(536)/result_xgb_seedens/oof_proba_xgb_seedens.npy")  # <-- поменяй имя
+    oof_third_raw = np.load("out/result12(5266) - overfit/oof_proba_cat_temp.npy")  # <-- поменяй имя
 
     oof_cat = align_proba_to_required(oof_cat_raw, "out/result11(536)/result_cat_temp/label_mapping_cat_temp.csv")
     oof_lgb = align_proba_to_required(oof_lgb_raw, "out/result10(537)/label_mapping_lgbm.csv")
-    oof_third = align_proba_to_required(oof_third_raw, "out/result11(536)/result_xgb_seedens/label_mapping_xgb_seedens.csv")  # <-- поменяй имя
+    oof_third = align_proba_to_required(oof_third_raw, "out/result12(5266) - overfit/label_mapping_cat_temp.csv")  # <-- поменяй имя
 
     # ----- SINGLE MODEL SCORES -----
     ll_cat = log_loss(y, oof_cat, labels=labels)

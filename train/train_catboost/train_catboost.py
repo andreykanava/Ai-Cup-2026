@@ -82,8 +82,8 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
             loss_function="MultiClass",
             eval_metric="MultiClass",
 
-            iterations=8000,
-            learning_rate=0.01,
+            iterations=5000,
+            learning_rate=0.03,
             depth=6,
 
             l2_leaf_reg=15.0,
@@ -100,6 +100,8 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
 
             task_type="GPU",
             thread_count=-1,
+
+            use_best_model=True,
 
             verbose=200,
         )

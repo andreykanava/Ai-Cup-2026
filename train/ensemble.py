@@ -9,7 +9,7 @@ REQUIRED = [
     "Birds of Prey", "Waders", "Songbirds"
 ]
 
-W_CAT = 0.689
+W_CAT = 0.709
 W_LGB = 1.0 - W_CAT
 
 test_ids = pd.read_parquet(f"{DATA_DIR}/test_ids.parquet")

@@ -37,7 +37,7 @@ def main():
 
     # --- load 3 models ---
     df_cat = load_proba(
-        "out/result11(536)/result_cat_temp/test_proba_cat_temp.npy",
+        "out/result12/result_cat_temp/test_proba_cat_temp.npy",
         "out/result11(536)/result_cat_temp/label_mapping_cat_temp.csv",
     )
     df_lgb = load_proba(

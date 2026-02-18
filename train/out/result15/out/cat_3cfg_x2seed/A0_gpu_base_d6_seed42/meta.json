@@ -1,0 +1,39 @@
+{
+  "model_name": "A0_gpu_base_d6_seed42",
+  "cfg": {
+    "name": "A0_gpu_base_d6",
+    "task_type": "GPU",
+    "iterations": 7000,
+    "learning_rate": 0.03,
+    "depth": 6,
+    "l2_leaf_reg": 14.0,
+    "min_data_in_leaf": 20,
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 1.0,
+    "random_strength": 1.5,
+    "od_wait": 250
+  },
+  "seed": 42,
+  "n_splits": 5,
+  "cv_logloss": 0.5454190155595091,
+  "fold_logloss": [
+    0.5355203992392703,
+    0.579057897579345,
+    0.5406970605874283,
+    0.5508960500693576,
+    0.5209427071367827
+  ],
+  "best_iters": [
+    5078,
+    3574,
+    4820,
+    3897,
+    6469
+  ],
+  "best_iter_mean": 4767.6,
+  "best_iter_median": 4820.0,
+  "use_gpu_default": true,
+  "task_type": "GPU",
+  "n_features": 127,
+  "n_classes": 9
+}

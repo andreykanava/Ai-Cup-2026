@@ -13,7 +13,7 @@ TARGET_COL = "bird_group"
 ID_COL = "track_id"
 
 # Должно совпадать с train_catboost_seed_ensemble.py
-SEEDS = [228, 666, 1234, 1488, 9090]
+SEEDS = [42,228, 777, 1488]
 
 REQUIRED = [
     "Clutter", "Cormorants", "Pigeons", "Ducks", "Geese",
@@ -35,8 +35,8 @@ def load_seed_arrays(seeds: list[int]) -> tuple[np.ndarray, np.ndarray]:
     oofs = []
     tests = []
     for s in seeds:
-        oof_path = f"oof_seed_{s}.npy"
-        test_path = f"test_seed_{s}.npy"
+        oof_path = f"out/cat_3cfg_x2seed/oof_seed{s}.npy"
+        test_path = f"out/cat_3cfg_x2seed/test_seed{s}.npy"
         if not os.path.exists(oof_path):
             raise FileNotFoundError(f"Missing {oof_path}. Add np.save in your trainer.")
         if not os.path.exists(test_path):

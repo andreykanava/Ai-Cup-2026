@@ -1,0 +1,30 @@
+{
+  "seed": 743,
+  "seed_ensemble_oof_logloss_allrows": 0.6433894032434933,
+  "cfg_scores_nonrare_sorted": [
+    {
+      "cfg": "cfg3_dart",
+      "cv_logloss_nonrare": 0.6374679523405844
+    },
+    {
+      "cfg": "cfg1_capacity",
+      "cv_logloss_nonrare": 0.6385316471848884
+    },
+    {
+      "cfg": "cfg0_safe_reg",
+      "cv_logloss_nonrare": 0.6636431762413632
+    },
+    {
+      "cfg": "cfg5_leafy_stoch",
+      "cv_logloss_nonrare": 0.6646514513213732
+    },
+    {
+      "cfg": "cfg2_extratrees",
+      "cv_logloss_nonrare": 0.6792630615325963
+    },
+    {
+      "cfg": "cfg4_strong_reg",
+      "cv_logloss_nonrare": 0.6868929704148832
+    }
+  ]
+}

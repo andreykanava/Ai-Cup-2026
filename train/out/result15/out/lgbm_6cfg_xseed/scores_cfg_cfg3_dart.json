@@ -1,0 +1,42 @@
+{
+  "cfg": "cfg3_dart",
+  "cfg_ensemble_oof_logloss_allrows": 0.6077450083973152,
+  "seed_scores_nonrare_sorted": [
+    {
+      "seed": 235,
+      "cv_logloss_nonrare": 0.6245771426507438
+    },
+    {
+      "seed": 463,
+      "cv_logloss_nonrare": 0.6348365688429574
+    },
+    {
+      "seed": 743,
+      "cv_logloss_nonrare": 0.6374679523405844
+    },
+    {
+      "seed": 214,
+      "cv_logloss_nonrare": 0.6401296421548421
+    },
+    {
+      "seed": 756,
+      "cv_logloss_nonrare": 0.6457963081422519
+    }
+  ],
+  "cfg_params": {
+    "boosting_type": "dart",
+    "num_leaves": 64,
+    "min_data_in_leaf": 140,
+    "reg_lambda": 8.0,
+    "reg_alpha": 0.0,
+    "colsample_bytree": 0.7,
+    "subsample": 0.8,
+    "extra_trees": false,
+    "max_bin": 255,
+    "drop_rate": 0.1,
+    "skip_drop": 0.5,
+    "max_drop": 50,
+    "n_estimators_dart": 6000,
+    "learning_rate_dart": 0.03
+  }
+}

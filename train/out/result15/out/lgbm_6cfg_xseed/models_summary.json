@@ -1,0 +1,124 @@
+{
+  "models": [
+    {
+      "model": "cfg0_safe_reg_seed743",
+      "cv_logloss_nonrare": 0.6636431762413632
+    },
+    {
+      "model": "cfg0_safe_reg_seed756",
+      "cv_logloss_nonrare": 0.674580120890049
+    },
+    {
+      "model": "cfg0_safe_reg_seed214",
+      "cv_logloss_nonrare": 0.6653897410200069
+    },
+    {
+      "model": "cfg0_safe_reg_seed463",
+      "cv_logloss_nonrare": 0.6680695990972714
+    },
+    {
+      "model": "cfg0_safe_reg_seed235",
+      "cv_logloss_nonrare": 0.651273113571455
+    },
+    {
+      "model": "cfg1_capacity_seed743",
+      "cv_logloss_nonrare": 0.6385316471848884
+    },
+    {
+      "model": "cfg1_capacity_seed756",
+      "cv_logloss_nonrare": 0.6474815394629189
+    },
+    {
+      "model": "cfg1_capacity_seed214",
+      "cv_logloss_nonrare": 0.6386523967728562
+    },
+    {
+      "model": "cfg1_capacity_seed463",
+      "cv_logloss_nonrare": 0.6450265805900096
+    },
+    {
+      "model": "cfg1_capacity_seed235",
+      "cv_logloss_nonrare": 0.6291720565519202
+    },
+    {
+      "model": "cfg2_extratrees_seed743",
+      "cv_logloss_nonrare": 0.6792630615325963
+    },
+    {
+      "model": "cfg2_extratrees_seed756",
+      "cv_logloss_nonrare": 0.6788447956597033
+    },
+    {
+      "model": "cfg2_extratrees_seed214",
+      "cv_logloss_nonrare": 0.672250245215286
+    },
+    {
+      "model": "cfg2_extratrees_seed463",
+      "cv_logloss_nonrare": 0.6801606143450589
+    },
+    {
+      "model": "cfg2_extratrees_seed235",
+      "cv_logloss_nonrare": 0.6564332656380846
+    },
+    {
+      "model": "cfg3_dart_seed743",
+      "cv_logloss_nonrare": 0.6374679523405844
+    },
+    {
+      "model": "cfg3_dart_seed756",
+      "cv_logloss_nonrare": 0.6457963081422519
+    },
+    {
+      "model": "cfg3_dart_seed214",
+      "cv_logloss_nonrare": 0.6401296421548421
+    },
+    {
+      "model": "cfg3_dart_seed463",
+      "cv_logloss_nonrare": 0.6348365688429574
+    },
+    {
+      "model": "cfg3_dart_seed235",
+      "cv_logloss_nonrare": 0.6245771426507438
+    },
+    {
+      "model": "cfg4_strong_reg_seed743",
+      "cv_logloss_nonrare": 0.6868929704148832
+    },
+    {
+      "model": "cfg4_strong_reg_seed756",
+      "cv_logloss_nonrare": 0.6926488235164722
+    },
+    {
+      "model": "cfg4_strong_reg_seed214",
+      "cv_logloss_nonrare": 0.684486669101399
+    },
+    {
+      "model": "cfg4_strong_reg_seed463",
+      "cv_logloss_nonrare": 0.6923155626038606
+    },
+    {
+      "model": "cfg4_strong_reg_seed235",
+      "cv_logloss_nonrare": 0.6709835752674765
+    },
+    {
+      "model": "cfg5_leafy_stoch_seed743",
+      "cv_logloss_nonrare": 0.6646514513213732
+    },
+    {
+      "model": "cfg5_leafy_stoch_seed756",
+      "cv_logloss_nonrare": 0.6741555928744593
+    },
+    {
+      "model": "cfg5_leafy_stoch_seed214",
+      "cv_logloss_nonrare": 0.6656589780672844
+    },
+    {
+      "model": "cfg5_leafy_stoch_seed463",
+      "cv_logloss_nonrare": 0.66633726093483
+    },
+    {
+      "model": "cfg5_leafy_stoch_seed235",
+      "cv_logloss_nonrare": 0.6482323230860089
+    }
+  ]
+}

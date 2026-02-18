@@ -1,0 +1,50 @@
+{
+  "cfg": "cfg0_safe_reg",
+  "seed": 235,
+  "boosting_type": "gbdt",
+  "n_splits": 5,
+  "rare_classes": 0,
+  "cv_acc_nonrare": 0.7908496732026143,
+  "cv_logloss_nonrare": 0.651273113571455,
+  "best_iter_mean": 878.0,
+  "fold_acc": [
+    0.7792706333973128,
+    0.8076923076923077,
+    0.8173076923076923,
+    0.7769230769230769,
+    0.7730769230769231
+  ],
+  "fold_logloss": [
+    0.6659408384076237,
+    0.562639426576393,
+    0.6030517994793466,
+    0.749733763873618,
+    0.6749715323571472
+  ],
+  "fold_best_iter": [
+    828,
+    1022,
+    997,
+    689,
+    854
+  ],
+  "cfg_params": {
+    "boosting_type": "gbdt",
+    "num_leaves": 48,
+    "min_data_in_leaf": 180,
+    "reg_lambda": 12.0,
+    "reg_alpha": 0.0,
+    "colsample_bytree": 0.7,
+    "subsample": 0.8,
+    "extra_trees": false,
+    "max_bin": 255
+  },
+  "globals": {
+    "EARLY_STOPPING": 450,
+    "LOG_EVERY": 200,
+    "N_ESTIMATORS": 30000,
+    "LEARNING_RATE": 0.05,
+    "DART_N_ESTIMATORS_DEFAULT": 6000,
+    "DART_LEARNING_RATE_DEFAULT": 0.03
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "model_name": "C0_gpu_d7_seed42",
+  "cfg": {
+    "name": "C0_gpu_d7",
+    "task_type": "GPU",
+    "iterations": 9000,
+    "learning_rate": 0.024,
+    "depth": 7,
+    "l2_leaf_reg": 20.0,
+    "min_data_in_leaf": 28,
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 1.0,
+    "random_strength": 2.0,
+    "od_wait": 350
+  },
+  "seed": 42,
+  "n_splits": 5,
+  "cv_logloss": 0.5416395060839648,
+  "fold_logloss": [
+    0.5363488251485589,
+    0.5729573676056442,
+    0.5402234228100041,
+    0.5397101028621041,
+    0.5189679861273399
+  ],
+  "best_iters": [
+    8694,
+    8832,
+    8147,
+    7741,
+    8969
+  ],
+  "best_iter_mean": 8476.6,
+  "best_iter_median": 8694.0,
+  "use_gpu_default": true,
+  "task_type": "GPU",
+  "n_features": 127,
+  "n_classes": 9
+}

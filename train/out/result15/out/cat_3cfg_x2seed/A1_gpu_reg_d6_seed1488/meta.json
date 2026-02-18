@@ -1,0 +1,39 @@
+{
+  "model_name": "A1_gpu_reg_d6_seed1488",
+  "cfg": {
+    "name": "A1_gpu_reg_d6",
+    "task_type": "GPU",
+    "iterations": 9000,
+    "learning_rate": 0.028,
+    "depth": 6,
+    "l2_leaf_reg": 18.0,
+    "min_data_in_leaf": 30,
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 0.9,
+    "random_strength": 1.2,
+    "od_wait": 300
+  },
+  "seed": 1488,
+  "n_splits": 5,
+  "cv_logloss": 0.5455886338619348,
+  "fold_logloss": [
+    0.6052292033601626,
+    0.570401923409744,
+    0.4681220068253857,
+    0.5477253133509051,
+    0.5363500289948125
+  ],
+  "best_iters": [
+    4502,
+    7071,
+    8992,
+    7128,
+    6578
+  ],
+  "best_iter_mean": 6854.2,
+  "best_iter_median": 7071.0,
+  "use_gpu_default": true,
+  "task_type": "GPU",
+  "n_features": 127,
+  "n_classes": 9
+}

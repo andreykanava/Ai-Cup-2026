@@ -1,0 +1,37 @@
+{
+  "cfg": "cfg2_extratrees",
+  "cfg_ensemble_oof_logloss_allrows": 0.6364210460376944,
+  "seed_scores_nonrare_sorted": [
+    {
+      "seed": 235,
+      "cv_logloss_nonrare": 0.6564332656380846
+    },
+    {
+      "seed": 214,
+      "cv_logloss_nonrare": 0.672250245215286
+    },
+    {
+      "seed": 756,
+      "cv_logloss_nonrare": 0.6788447956597033
+    },
+    {
+      "seed": 743,
+      "cv_logloss_nonrare": 0.6792630615325963
+    },
+    {
+      "seed": 463,
+      "cv_logloss_nonrare": 0.6801606143450589
+    }
+  ],
+  "cfg_params": {
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "min_data_in_leaf": 140,
+    "reg_lambda": 8.0,
+    "reg_alpha": 0.0,
+    "colsample_bytree": 0.65,
+    "subsample": 0.75,
+    "extra_trees": true,
+    "max_bin": 255
+  }
+}

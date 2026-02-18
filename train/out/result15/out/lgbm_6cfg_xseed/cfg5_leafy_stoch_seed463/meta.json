@@ -1,0 +1,50 @@
+{
+  "cfg": "cfg5_leafy_stoch",
+  "seed": 463,
+  "boosting_type": "gbdt",
+  "n_splits": 5,
+  "rare_classes": 0,
+  "cv_acc_nonrare": 0.7854671280276817,
+  "cv_logloss_nonrare": 0.66633726093483,
+  "best_iter_mean": 1194.4,
+  "fold_acc": [
+    0.7677543186180422,
+    0.8076923076923077,
+    0.7692307692307693,
+    0.7923076923076923,
+    0.7903846153846154
+  ],
+  "fold_logloss": [
+    0.7125547771324229,
+    0.6588344854956324,
+    0.6783950490778369,
+    0.6481963773945951,
+    0.6336167357348217
+  ],
+  "fold_best_iter": [
+    1091,
+    1107,
+    1171,
+    1359,
+    1244
+  ],
+  "cfg_params": {
+    "boosting_type": "gbdt",
+    "num_leaves": 96,
+    "min_data_in_leaf": 110,
+    "reg_lambda": 5.0,
+    "reg_alpha": 0.0,
+    "colsample_bytree": 0.62,
+    "subsample": 0.7,
+    "extra_trees": true,
+    "max_bin": 255
+  },
+  "globals": {
+    "EARLY_STOPPING": 450,
+    "LOG_EVERY": 200,
+    "N_ESTIMATORS": 30000,
+    "LEARNING_RATE": 0.05,
+    "DART_N_ESTIMATORS_DEFAULT": 6000,
+    "DART_LEARNING_RATE_DEFAULT": 0.03
+  }
+}

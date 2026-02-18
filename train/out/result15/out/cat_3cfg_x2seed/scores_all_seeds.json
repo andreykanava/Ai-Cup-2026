@@ -1,0 +1,76 @@
+{
+  "seeds": {
+    "42": {
+      "seed": 42,
+      "seed_ensemble_oof_logloss": 0.5425219513642214,
+      "models_sorted": [
+        {
+          "model": "C0_gpu_d7_seed42",
+          "cv_logloss": 0.5416395060839648
+        },
+        {
+          "model": "A0_gpu_base_d6_seed42",
+          "cv_logloss": 0.5454190155595091
+        },
+        {
+          "model": "A1_gpu_reg_d6_seed42",
+          "cv_logloss": 0.5458780834712471
+        }
+      ]
+    },
+    "1488": {
+      "seed": 1488,
+      "seed_ensemble_oof_logloss": 0.5437623931587172,
+      "models_sorted": [
+        {
+          "model": "C0_gpu_d7_seed1488",
+          "cv_logloss": 0.5438764261113775
+        },
+        {
+          "model": "A1_gpu_reg_d6_seed1488",
+          "cv_logloss": 0.5455886338619348
+        },
+        {
+          "model": "A0_gpu_base_d6_seed1488",
+          "cv_logloss": 0.5468385581903125
+        }
+      ]
+    },
+    "228": {
+      "seed": 228,
+      "seed_ensemble_oof_logloss": 0.5481446612628373,
+      "models_sorted": [
+        {
+          "model": "C0_gpu_d7_seed228",
+          "cv_logloss": 0.5486361390799198
+        },
+        {
+          "model": "A0_gpu_base_d6_seed228",
+          "cv_logloss": 0.5503126315263642
+        },
+        {
+          "model": "A1_gpu_reg_d6_seed228",
+          "cv_logloss": 0.5504430150659876
+        }
+      ]
+    },
+    "777": {
+      "seed": 777,
+      "seed_ensemble_oof_logloss": 0.5466387747739524,
+      "models_sorted": [
+        {
+          "model": "A0_gpu_base_d6_seed777",
+          "cv_logloss": 0.5481147321573148
+        },
+        {
+          "model": "A1_gpu_reg_d6_seed777",
+          "cv_logloss": 0.5481195764203656
+        },
+        {
+          "model": "C0_gpu_d7_seed777",
+          "cv_logloss": 0.5491085295404571
+        }
+      ]
+    }
+  }
+}

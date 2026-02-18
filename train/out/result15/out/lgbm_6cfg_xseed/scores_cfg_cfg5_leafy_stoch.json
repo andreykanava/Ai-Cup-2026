@@ -1,0 +1,37 @@
+{
+  "cfg": "cfg5_leafy_stoch",
+  "cfg_ensemble_oof_logloss_allrows": 0.6290598920436766,
+  "seed_scores_nonrare_sorted": [
+    {
+      "seed": 235,
+      "cv_logloss_nonrare": 0.6482323230860089
+    },
+    {
+      "seed": 743,
+      "cv_logloss_nonrare": 0.6646514513213732
+    },
+    {
+      "seed": 214,
+      "cv_logloss_nonrare": 0.6656589780672844
+    },
+    {
+      "seed": 463,
+      "cv_logloss_nonrare": 0.66633726093483
+    },
+    {
+      "seed": 756,
+      "cv_logloss_nonrare": 0.6741555928744593
+    }
+  ],
+  "cfg_params": {
+    "boosting_type": "gbdt",
+    "num_leaves": 96,
+    "min_data_in_leaf": 110,
+    "reg_lambda": 5.0,
+    "reg_alpha": 0.0,
+    "colsample_bytree": 0.62,
+    "subsample": 0.7,
+    "extra_trees": true,
+    "max_bin": 255
+  }
+}

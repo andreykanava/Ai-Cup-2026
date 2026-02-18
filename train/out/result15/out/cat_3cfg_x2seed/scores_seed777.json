@@ -1,0 +1,18 @@
+{
+  "seed": 777,
+  "seed_ensemble_oof_logloss": 0.5466387747739524,
+  "models_sorted": [
+    {
+      "model": "A0_gpu_base_d6_seed777",
+      "cv_logloss": 0.5481147321573148
+    },
+    {
+      "model": "A1_gpu_reg_d6_seed777",
+      "cv_logloss": 0.5481195764203656
+    },
+    {
+      "model": "C0_gpu_d7_seed777",
+      "cv_logloss": 0.5491085295404571
+    }
+  ]
+}

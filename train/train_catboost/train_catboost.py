@@ -17,7 +17,7 @@ ID_COL = "track_id"
 
 N_SPLITS = 5
 
-SEEDS = [42, 1337, 2024, 777, 999]   # ensemble seeds
+SEEDS = [1488, 666, 228, 1234, 9090]   # ensemble seeds
 
 
 def load_data():
@@ -100,8 +100,6 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
 
             task_type="GPU",
             thread_count=-1,
-
-            use_best_model=True,
 
             verbose=200,
         )

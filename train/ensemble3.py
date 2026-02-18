@@ -21,6 +21,7 @@ W_CAT, W_LGB, W_HGB = W_CAT / W_SUM, W_LGB / W_SUM, W_HGB / W_SUM
 
 
 def load_proba(path_npy: str, path_mapping_csv: str) -> pd.DataFrame:
+    print(path_npy)
     p = np.load(path_npy)
     cls = pd.read_csv(path_mapping_csv)["label"].astype(str).tolist()
     df = pd.DataFrame(p, columns=cls)
@@ -47,8 +48,8 @@ def main():
     # HGB temperature-scaled output from your script
     # (if you want raw instead, point to test_proba_hgb.npy + its mapping)
     df_hgb = load_proba(
-        "out/result12(5266) - overfit/test_proba_cat_temp.npy",
-        "out/result12(5266) - overfit/label_mapping_cat_temp.csv",
+        "out/result13/test_proba_cat_weighted.npy",
+        "out/result13/label_mapping_cat.csv",
     )
 
     # --- weighted blend ---

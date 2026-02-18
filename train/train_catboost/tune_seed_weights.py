@@ -13,7 +13,7 @@ TARGET_COL = "bird_group"
 ID_COL = "track_id"
 
 # Должно совпадать с train_catboost_seed_ensemble.py
-SEEDS = [42, 1337, 2024, 777, 999]
+SEEDS = [42, 228, 666, 1234, 1488, 9090]
 
 REQUIRED = [
     "Clutter", "Cormorants", "Pigeons", "Ducks", "Geese",
@@ -146,15 +146,15 @@ def main():
     print(f"best_logloss: {best_ll:.6f}")
 
     # save weights
-    pd.DataFrame({"seed": SEEDS, "weight": best_w}).to_csv("../out/result12(5266) - overfit/cat_files/weights_seed_ensemble.csv", index=False)
+    pd.DataFrame({"seed": SEEDS, "weight": best_w}).to_csv("weights_seed_ensemble.csv", index=False)
     print("Saved weights_seed_ensemble.csv")
 
     # blended outputs
     oof_best = blend(oofs, best_w)
     test_best = blend(tests, best_w)
 
-    np.save("../out/result12(5266) - overfit/cat_files/oof_proba_cat_weighted.npy", oof_best)
-    np.save("../out/result12(5266) - overfit/cat_files/test_proba_cat_weighted.npy", test_best)
+    np.save("oof_proba_cat_weighted.npy", oof_best)
+    np.save("test_proba_cat_weighted.npy", test_best)
 
     # submission
     test_ids = pd.read_parquet(f"{DATA_DIR}/test_ids.parquet")[[ID_COL]]

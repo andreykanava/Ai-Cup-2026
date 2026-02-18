@@ -1,0 +1,82 @@
+{
+  "required": [
+    "Clutter",
+    "Cormorants",
+    "Pigeons",
+    "Ducks",
+    "Geese",
+    "Gulls",
+    "Birds of Prey",
+    "Waders",
+    "Songbirds"
+  ],
+  "max_weight": 0.8,
+  "uniform_logloss": 0.5595678830250949,
+  "best_logloss": 0.5365138756877315,
+  "models": [
+    {
+      "name": "CatBoost",
+      "weight": 0.0028493637096951956
+    },
+    {
+      "name": "CatBoost_weighted",
+      "weight": 0.03453732273727086
+    },
+    {
+      "name": "CatBoost_temp",
+      "weight": 0.7668649734858701
+    },
+    {
+      "name": "LightGBM_ens",
+      "weight": 0.11215653423872389
+    },
+    {
+      "name": "LightGBM_weighted",
+      "weight": 0.06833317815131208
+    },
+    {
+      "name": "HGB_ms",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "HGB_ms_ts",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "HGB_weighted",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "HGB_weighted_ts",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "XGB_seedens",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "Stack_LogReg",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "Seed_42",
+      "weight": 0.0021750653197454978
+    },
+    {
+      "name": "Seed_1337",
+      "weight": 5.565163495498431e-06
+    },
+    {
+      "name": "Seed_2024",
+      "weight": 0.003694471783824385
+    },
+    {
+      "name": "Seed_777",
+      "weight": 0.009344569265593947
+    },
+    {
+      "name": "Seed_999",
+      "weight": 5.565163495498431e-06
+    }
+  ]
+}

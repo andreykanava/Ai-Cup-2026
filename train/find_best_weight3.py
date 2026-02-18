@@ -50,11 +50,11 @@ def main():
     # ----- LOAD -----
     oof_cat_raw = np.load("out/result11(536)/result_cat_temp/oof_proba_cat_temp.npy")
     oof_lgb_raw = np.load("out/result11(536)/oof_proba_lgbm_weighted.npy")
-    oof_third_raw = np.load("out/result12(5266) - overfit/oof_proba_cat_temp.npy")  # <-- поменяй имя
+    oof_third_raw = np.load("out/result13/catboost_multicfg/ensemble_smart/oof_weighted.npy")  # <-- поменяй имя
 
     oof_cat = align_proba_to_required(oof_cat_raw, "out/result11(536)/result_cat_temp/label_mapping_cat_temp.csv")
     oof_lgb = align_proba_to_required(oof_lgb_raw, "out/result10(537)/label_mapping_lgbm.csv")
-    oof_third = align_proba_to_required(oof_third_raw, "out/result12(5266) - overfit/label_mapping_cat_temp.csv")  # <-- поменяй имя
+    oof_third = align_proba_to_required(oof_third_raw, "out/result13/catboost_multicfg/label_mapping.csv")  # <-- поменяй имя
 
     # ----- SINGLE MODEL SCORES -----
     ll_cat = log_loss(y, oof_cat, labels=labels)
@@ -64,7 +64,7 @@ def main():
     print("OOF logloss:")
     print("  CatBoost :", ll_cat)
     print("  LightGBM :", ll_lgb)
-    print("  RF    :", ll_third)
+    print("  CatBoost multicfg    :", ll_third)
     print()
 
     # ----- GRID SEARCH WEIGHTS (w1+w2+w3=1) -----
@@ -98,7 +98,7 @@ def main():
     print("BEST RESULT:")
     print("  weight_cat  =", round(best["w_cat"], 3))
     print("  weight_lgb  =", round(best["w_lgb"], 3))
-    print("  weight_rf=", round(best["w_third"], 3))
+    print("  weight_mcfg=", round(best["w_third"], 3))
     print("  logloss     =", best["logloss"])
 
 

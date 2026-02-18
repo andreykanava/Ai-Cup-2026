@@ -1,0 +1,11 @@
+MODEL_1 = {
+    "name": "6ens1",
+    "oof_path": "result/ensemble_many/oof_ens.npy",
+    "mapping_path": "out/result11(536)/label_mapping_cat.csv",
+}
+
+MODEL_2 = {
+    "name": "6ens2",
+    "oof_path": "out/result11(536)/ensemble_many/oof_ens.npy",
+    "mapping_path": "out/result11(536)/label_mapping_cat.csv",
+}

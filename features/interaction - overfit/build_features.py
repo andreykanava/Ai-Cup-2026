@@ -135,7 +135,7 @@ def add_interaction_features(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main():
-    IN_PATH  = "../../data/interim/train/train_11.parquet"   # поменяй на свой
+    IN_PATH  = "../../data/interim/train/train_11-optimal.parquet"  # поменяй на свой
     OUT_PATH = "../../data/interim/train/train_12.parquet"  # поменяй на свой
 
     df = pd.read_parquet(IN_PATH)

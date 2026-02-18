@@ -17,7 +17,7 @@ ID_COL = "track_id"
 
 N_SPLITS = 5
 
-SEEDS = [1488, 666, 228, 1234, 9090]   # ensemble seeds
+SEEDS = [1234, 9090]   # ensemble seeds
 
 
 def load_data():

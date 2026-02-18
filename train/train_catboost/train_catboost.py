@@ -8,16 +8,15 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, log_loss
 
 from catboost import CatBoostClassifier
-from sklearn.model_selection import GroupKFold
 
 
-DATA_DIR = "../../data/processed"
+DATA_DIR = "../../data/processed/best"
 TARGET_COL = "bird_group"
 ID_COL = "track_id"
 
 N_SPLITS = 5
 
-SEEDS = [1234, 9090]   # ensemble seeds
+SEEDS = [42, 1337, 2024, 777, 999]   # ensemble seeds
 
 
 def load_data():
@@ -85,21 +84,21 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
             iterations=5000,
             learning_rate=0.03,
             depth=6,
-            rsm = 0.85,
 
             l2_leaf_reg=15.0,
-            min_data_in_leaf=40,
+            min_data_in_leaf=20,
 
             bootstrap_type="Bayesian",
-            bagging_temperature=0.3 ,
-            random_strength=0.5,
+            bagging_temperature=1.0,
+            random_strength=1.5,
+
 
             random_seed=seed,
 
             od_type="Iter",
             od_wait=200,
 
-            task_type="CPU",
+            task_type="GPU",
             thread_count=-1,
 
             verbose=200,
@@ -181,11 +180,11 @@ def main():
     print("final logloss:", final_ll)
 
     # save
-    np.save("../out/result12(5266) - overfit/cat_files/oof_proba_cat.npy", oof_all)
-    np.save("../out/result12(5266) - overfit/cat_files/test_proba_cat.npy", test_all)
+    np.save("oof_proba_cat.npy", oof_all)
+    np.save("test_proba_cat.npy", test_all)
 
     pd.DataFrame({"label": le.classes_}).to_csv(
-        "../out/result12(5266) - overfit/cat_files/label_mapping_cat.csv",
+        "label_mapping_cat.csv",
         index=False
     )
 

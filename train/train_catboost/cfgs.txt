@@ -1,0 +1,52 @@
+# A0: GPU baseline (стабильная)
+
+
+    # B0: CPU rsm — твой победный стиль
+    dict(
+        name="B0_cpu_rsm085",
+        task_type="CPU",
+        iterations=9000,
+        learning_rate=0.03,
+        depth=6,
+        rsm=0.85,
+        l2_leaf_reg=15.0,
+        min_data_in_leaf=40,
+        bootstrap_type="Bayesian",
+        bagging_temperature=0.3,
+        random_strength=0.5,
+        od_wait=250,
+    ),
+
+    # B1: CPU rsm чуть сильнее шум (ансабль любит)
+    dict(
+        name="B1_cpu_rsm080",
+        task_type="CPU",
+        iterations=11000,
+        learning_rate=0.027,
+        depth=6,
+        rsm=0.80,
+        l2_leaf_reg=18.0,
+        min_data_in_leaf=45,
+        bootstrap_type="Bayesian",
+        bagging_temperature=0.45,
+        random_strength=0.8,
+        od_wait=350,
+    ),
+
+
+
+    # C1: CPU depth7 + rsm (максимально “иная” модель)
+    dict(
+        name="C1_cpu_d7_rsm090",
+        task_type="CPU",
+        iterations=12000,
+        learning_rate=0.022,
+        depth=7,
+        rsm=0.90,
+        l2_leaf_reg=24.0,
+        min_data_in_leaf=50,
+        bootstrap_type="Bayesian",
+        bagging_temperature=0.4,
+        random_strength=1.0,
+        od_wait=450,
+    ),

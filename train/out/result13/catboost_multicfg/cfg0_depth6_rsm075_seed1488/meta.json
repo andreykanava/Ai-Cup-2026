@@ -1,0 +1,38 @@
+{
+  "model_name": "cfg0_depth6_rsm075_seed1488",
+  "cfg": {
+    "name": "cfg0_depth6_rsm075",
+    "iterations": 7000,
+    "learning_rate": 0.03,
+    "depth": 6,
+    "rsm": 0.75,
+    "l2_leaf_reg": 15.0,
+    "min_data_in_leaf": 20,
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 1.0,
+    "random_strength": 1.5,
+    "od_wait": 250
+  },
+  "seed": 1488,
+  "n_splits": 5,
+  "cv_logloss": 0.5652572984740395,
+  "fold_logloss": [
+    0.6189928769823625,
+    0.576539914559377,
+    0.4922040555616498,
+    0.5777084790573179,
+    0.5607378272555569
+  ],
+  "best_iters": [
+    4704,
+    4348,
+    6951,
+    5220,
+    4886
+  ],
+  "best_iter_mean": 5221.8,
+  "best_iter_median": 4886.0,
+  "use_gpu": false,
+  "n_features": 127,
+  "n_classes": 9
+}

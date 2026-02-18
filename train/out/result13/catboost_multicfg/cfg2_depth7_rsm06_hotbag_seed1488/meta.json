@@ -1,0 +1,38 @@
+{
+  "model_name": "cfg2_depth7_rsm06_hotbag_seed1488",
+  "cfg": {
+    "name": "cfg2_depth7_rsm06_hotbag",
+    "iterations": 9000,
+    "learning_rate": 0.022,
+    "depth": 7,
+    "rsm": 0.6,
+    "l2_leaf_reg": 12.0,
+    "min_data_in_leaf": 15,
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 2.0,
+    "random_strength": 1.0,
+    "od_wait": 300
+  },
+  "seed": 1488,
+  "n_splits": 5,
+  "cv_logloss": 0.5767228913010671,
+  "fold_logloss": [
+    0.6276477682185001,
+    0.5967821570763966,
+    0.5054570693345528,
+    0.5889382009976927,
+    0.5646913291459539
+  ],
+  "best_iters": [
+    4603,
+    4519,
+    8002,
+    4550,
+    5635
+  ],
+  "best_iter_mean": 5461.8,
+  "best_iter_median": 4603.0,
+  "use_gpu": false,
+  "n_features": 127,
+  "n_classes": 9
+}

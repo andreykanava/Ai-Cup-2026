@@ -1,0 +1,30 @@
+{
+  "required": [
+    "Clutter",
+    "Cormorants",
+    "Pigeons",
+    "Ducks",
+    "Geese",
+    "Gulls",
+    "Birds of Prey",
+    "Waders",
+    "Songbirds"
+  ],
+  "max_weight": 0.8,
+  "uniform_logloss": 0.540652977138182,
+  "best_logloss": 0.5361508097969894,
+  "models": [
+    {
+      "name": "CatBoost_temp",
+      "weight": 0.7175036738945313
+    },
+    {
+      "name": "LightGBM_weighted",
+      "weight": 0.16790844769335941
+    },
+    {
+      "name": "CatBoost_multicfg_smart",
+      "weight": 0.11458787841210939
+    }
+  ]
+}

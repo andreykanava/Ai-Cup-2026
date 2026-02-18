@@ -1,0 +1,38 @@
+{
+  "model_name": "cfg1_depth5_rsm09_reg30_seed1488",
+  "cfg": {
+    "name": "cfg1_depth5_rsm09_reg30",
+    "iterations": 9000,
+    "learning_rate": 0.025,
+    "depth": 5,
+    "rsm": 0.9,
+    "l2_leaf_reg": 30.0,
+    "min_data_in_leaf": 30,
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 0.6,
+    "random_strength": 2.0,
+    "od_wait": 300
+  },
+  "seed": 1488,
+  "n_splits": 5,
+  "cv_logloss": 0.5547211960151827,
+  "fold_logloss": [
+    0.6065338604322659,
+    0.5629600323526323,
+    0.48714837631710134,
+    0.572002480546736,
+    0.5448615933502048
+  ],
+  "best_iters": [
+    8966,
+    8945,
+    8987,
+    8960,
+    8984
+  ],
+  "best_iter_mean": 8968.4,
+  "best_iter_median": 8966.0,
+  "use_gpu": false,
+  "n_features": 127,
+  "n_classes": 9
+}

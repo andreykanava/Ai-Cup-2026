@@ -1,0 +1,32 @@
+{
+  "method": "optimized_convex_weights",
+  "best_oof_logloss": 0.5514605751780383,
+  "n_iter": 30000,
+  "seed": 42,
+  "models": [
+    {
+      "name": "cfg0_depth6_rsm075_seed1488",
+      "weight": 2.6487800010160883e-05
+    },
+    {
+      "name": "cfg0_depth6_rsm075_seed228",
+      "weight": 0.1579431450350679
+    },
+    {
+      "name": "cfg1_depth5_rsm09_reg30_seed1488",
+      "weight": 0.601172021206551
+    },
+    {
+      "name": "cfg1_depth5_rsm09_reg30_seed228",
+      "weight": 0.2408217003395899
+    },
+    {
+      "name": "cfg2_depth7_rsm06_hotbag_seed1488",
+      "weight": 2.2761022315875345e-05
+    },
+    {
+      "name": "cfg2_depth7_rsm06_hotbag_seed228",
+      "weight": 1.3884596465190584e-05
+    }
+  ]
+}

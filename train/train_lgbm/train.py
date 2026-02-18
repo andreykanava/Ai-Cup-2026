@@ -33,13 +33,13 @@ ID_COL = "track_id"
 N_SPLITS = 5
 
 # ensemble seeds (add/remove)
-SEEDS = [1, 42, 1337, 2026, 777]
+SEEDS = [743, 756, 214, 463, 235]
 
 # If you already have this file (from your CatBoost feature drop):
-DROP_CSV = "features_to_drop.csv"
+DROP_CSV = "../features_to_drop.csv"
 
 # Training speed/quality knobs
-EARLY_STOPPING = 300       # 500 -> safer, 200-300 -> faster
+EARLY_STOPPING = 450       # 500 -> safer, 200-300 -> faster
 LOG_EVERY = 200
 N_ESTIMATORS = 20000       # big ceiling; early stopping will cut it
 LEARNING_RATE = 0.05       # faster than 0.03; usually similar quality with reg
@@ -104,12 +104,12 @@ def build_model_profile(profile: str, n_classes: int, seed: int) -> lgb.LGBMClas
         learning_rate=LEARNING_RATE,
         n_estimators=N_ESTIMATORS,
 
-        subsample=0.85,
+        subsample=0.8,
         subsample_freq=1,
-        colsample_bytree=0.85,
+        colsample_bytree=0.7,
 
         # better generalization on OHE
-        extra_trees=True,
+        extra_trees=False,
 
         # speed for wide matrices
         force_row_wise=FORCE_ROW_WISE,
@@ -124,21 +124,21 @@ def build_model_profile(profile: str, n_classes: int, seed: int) -> lgb.LGBMClas
             **common,
             num_leaves=48,
             max_depth=-1,
-            min_data_in_leaf=120,
+            min_data_in_leaf=150,
             min_child_samples=40,
             min_child_weight=1e-3,
             min_split_gain=0.0,
             reg_alpha=0.0,
-            reg_lambda=8.0,
+            reg_lambda=10.0,
             max_bin=255,
         )
 
     if profile == "leafy":
         return lgb.LGBMClassifier(
             **common,
-            num_leaves=96,
+            num_leaves=64,
             max_depth=-1,
-            min_data_in_leaf=80,
+            min_data_in_leaf=120,
             min_child_samples=25,
             min_child_weight=1e-3,
             min_split_gain=0.0,
@@ -194,7 +194,7 @@ def run_one_seed(
     X_ok = X_train.iloc[ok_idx]
     y_ok = y[ok_idx]
 
-    profiles = ["regularized", "leafy"]  # average both profiles inside each fold
+    profiles = ["regularized"]  # average both profiles inside each fold
 
     print(f"\n===== SEED {seed} | classes={n_classes} rare_classes={len(rare_classes)} n_splits={n_splits} =====")
 
@@ -218,7 +218,7 @@ def run_one_seed(
         best_iters = []
 
         for profile in profiles:
-            model = build_model_profile(profile, n_classes, seed + 10_000 * fold)  # fold-dependent seed for extra variety
+            model = build_model_profile(profile, n_classes, seed)  # fold-dependent seed for extra variety
 
             model.fit(
                 X_tr,

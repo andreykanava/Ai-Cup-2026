@@ -12,8 +12,8 @@ DATA_DIR = "../../data/processed"
 TARGET_COL = "bird_group"
 ID_COL = "track_id"
 
-SEEDS = [1, 42, 1337, 2026, 777]
-SEED_DIR = "../out/result12(5266) - overfit/lgbm_seeds"
+SEEDS = [743, 756, 214, 463, 235]
+SEED_DIR = "../lgbm_seeds"
 
 EPS = 1e-15
 
@@ -126,14 +126,14 @@ def main():
         print(f"seed {s}: {w:.6f}")
     print(f"best_logloss: {best_ll:.6f}")
 
-    pd.DataFrame({"seed": SEEDS, "weight": best_w}).to_csv("result_weight/weights_lgbm_seeds.csv", index=False)
+    pd.DataFrame({"seed": SEEDS, "weight": best_w}).to_csv("weights_lgbm_seeds.csv", index=False)
     print("Saved weights_lgbm_seeds.csv")
 
     oof_best = blend(oofs, best_w)
     test_best = blend(tests, best_w)
 
-    np.save("result_weight/oof_proba_lgbm_weighted.npy", oof_best)
-    np.save("result_weight/test_proba_lgbm_weighted.npy", test_best)
+    np.save("oof_proba_lgbm_weighted.npy", oof_best)
+    np.save("test_proba_lgbm_weighted.npy", test_best)
 
     test_ids = pd.read_parquet(f"{DATA_DIR}/test_ids.parquet")[[ID_COL]]
     sub_proba = pd.DataFrame(test_best, columns=classes)

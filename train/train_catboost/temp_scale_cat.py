@@ -9,9 +9,9 @@ ID_COL="track_id"
 REQUIRED=["Clutter","Cormorants","Pigeons","Ducks","Geese","Gulls","Birds of Prey","Waders","Songbirds"]
 EPS=1e-15
 
-OOF="oof_proba_cat_weighted.npy"
-TEST="test_proba_cat_weighted.npy"
-MAP="label_mapping_cat.csv"
+OOF="../result/ensemble_many/oof_ens.npy"
+TEST="../result/ensemble_many/test_ens.npy"
+MAP="../out/result14/catboost/label_mapping_cat.csv"
 
 def align(p, mapping):
     cls=pd.read_csv(mapping)["label"].astype(str).tolist()

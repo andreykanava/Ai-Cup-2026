@@ -17,12 +17,12 @@ REQUIRED = [
 EPS = 1e-15
 
 # ---- INPUTS ----
-T = 1.038
-OOF_IN  = "oof_proba_cat_weighted.npy"
-TEST_IN = "test_proba_cat_weighted.npy"
-MAP_IN  = "label_mapping_cat.csv"
+T = 1.036
+OOF_IN  = "../out/result14/catboost/oof_proba_cat_weighted.npy"
+TEST_IN = "../out/result14/catboost/test_proba_cat_weighted.npy"
+MAP_IN  = "../out/result14/catboost/label_mapping_cat.csv"
 
-OUT_DIR = "../result13/"
+OUT_DIR = "../result14/"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 

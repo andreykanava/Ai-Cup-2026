@@ -38,15 +38,15 @@ class ModelSpec:
 MODELS: List[ModelSpec] = [
     ModelSpec(
         name="CatBoost_temp",
-        oof_path="out/result11(536)/result_cat_temp/oof_proba_cat_temp.npy",
-        test_path="out/result11(536)/result_cat_temp/test_proba_cat_temp.npy",  # <-- поправь если другое имя
-        mapping_csv="out/result11(536)/result_cat_temp/label_mapping_cat_temp.csv",
+        oof_path="out/result14/bimbim/oof_proba_cat_temp.npy",
+        test_path="out/result14/bimbim/test_proba_cat_temp.npy",  # <-- поправь если другое имя
+        mapping_csv="out/result14/bimbim/label_mapping_cat_temp.csv",
     ),
     ModelSpec(
         name="LightGBM_weighted",
-        oof_path="out/result11(536)/oof_proba_lgbm_weighted.npy",
-        test_path="out/result11(536)/test_proba_lgbm_weighted.npy",  # <-- поправь
-        mapping_csv="out/result10(537)/label_mapping_lgbm.csv",
+        oof_path="out/result14/bimbim/oof_proba_lgbm_weighted.npy",
+        test_path="out/result14/bimbim/test_proba_lgbm_weighted.npy",  # <-- поправь
+        mapping_csv="out/result14/bimbim/label_mapping_lgbm.csv",
     ),
 ]
 

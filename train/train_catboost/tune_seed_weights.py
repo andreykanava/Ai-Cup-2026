@@ -13,7 +13,7 @@ TARGET_COL = "bird_group"
 ID_COL = "track_id"
 
 # Должно совпадать с train_catboost_seed_ensemble.py
-SEEDS = [42, 228, 666, 1234, 1488, 9090]
+SEEDS = [228, 666, 1234, 1488, 9090]
 
 REQUIRED = [
     "Clutter", "Cormorants", "Pigeons", "Ducks", "Geese",

@@ -37,16 +37,105 @@ class ModelSpec:
 
 MODELS: List[ModelSpec] = [
     ModelSpec(
-        name="CatBoost_temp",
-        oof_path="out/result14/bimbim/oof_proba_cat_temp.npy",
-        test_path="out/result14/bimbim/test_proba_cat_temp.npy",  # <-- поправь если другое имя
-        mapping_csv="out/result14/bimbim/label_mapping_cat_temp.csv",
+        name="LGBM_cfg0_safe_reg",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_cfg_cfg0_safe_reg.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_cfg_cfg0_safe_reg.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
     ),
     ModelSpec(
-        name="LightGBM_weighted",
-        oof_path="out/result14/bimbim/oof_proba_lgbm_weighted.npy",
-        test_path="out/result14/bimbim/test_proba_lgbm_weighted.npy",  # <-- поправь
-        mapping_csv="out/result14/bimbim/label_mapping_lgbm.csv",
+        name="LGBM_cfg1_capacity",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_cfg_cfg1_capacity.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_cfg_cfg1_capacity.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_cfg2_extratrees",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_cfg_cfg2_extratrees.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_cfg_cfg2_extratrees.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_cfg3_dart",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_cfg_cfg3_dart.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_cfg_cfg3_dart.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_cfg4_strong_reg",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_cfg_cfg4_strong_reg.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_cfg_cfg4_strong_reg.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_cfg5_leafy_stoch",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_cfg_cfg5_leafy_stoch.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_cfg_cfg5_leafy_stoch.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+
+    # -----------------------------
+    # LGBM seed ensemble outputs
+    # -----------------------------
+    ModelSpec(
+        name="LGBM_seed214",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_seed214.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_seed214.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_seed235",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_seed235.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_seed235.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_seed463",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_seed463.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_seed463.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_seed743",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_seed743.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_seed743.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+    ModelSpec(
+        name="LGBM_seed756",
+        oof_path="out/result15/out/lgbm_6cfg_xseed/oof_seed756.npy",
+        test_path="out/result15/out/lgbm_6cfg_xseed/test_seed756.npy",
+        mapping_csv="out/result15/out/lgbm_6cfg_xseed/label_mapping_lgbm.csv",
+    ),
+
+    ModelSpec(
+        name="Cat_seed42",
+        oof_path="out/result15/out/cat_3cfg_x2seed/oof_seed42.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed/test_seed42.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Cat_seed228",
+        oof_path="out/result15/out/cat_3cfg_x2seed/oof_seed228.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed/test_seed228.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Cat_seed777",
+        oof_path="out/result15/out/cat_3cfg_x2seed/oof_seed777.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed/test_seed777.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Cat_seed1488",
+        oof_path="out/result15/out/cat_3cfg_x2seed/oof_seed1488.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed/test_seed1488.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Old_LGBM",
+        oof_path="out/result11(536)/oof_proba_lgbm_weighted.npy",
+        test_path="out/result11(536)/test_proba_lgbm_weighted.npy",
+        mapping_csv="out/result11(536)/label_mapping_lgbm.csv",
     ),
 ]
 

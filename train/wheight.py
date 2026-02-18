@@ -131,6 +131,32 @@ MODELS: List[ModelSpec] = [
         test_path="out/result15/out/cat_3cfg_x2seed/test_seed1488.npy",
         mapping_csv="out/result15/out/cat_3cfg_x2seed/label_mapping.csv",
     ),
+
+    ModelSpec(
+        name="Cat_seed42cpu",
+        oof_path="out/result15/out/cat_3cfg_x2seed_cpu/oof_seed42.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed_cpu/test_seed42.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed_cpu/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Cat_seed228cpu",
+        oof_path="out/result15/out/cat_3cfg_x2seed_cpu/oof_seed228.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed_cpu/test_seed228.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed_cpu/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Cat_seed777cpu",
+        oof_path="out/result15/out/cat_3cfg_x2seed_cpu/oof_seed777.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed_cpu/test_seed777.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed_cpu/label_mapping.csv",
+    ),
+    ModelSpec(
+        name="Cat_seed1488cpu",
+        oof_path="out/result15/out/cat_3cfg_x2seed_cpu/oof_seed1488.npy",
+        test_path="out/result15/out/cat_3cfg_x2seed_cpu/test_seed1488.npy",
+        mapping_csv="out/result15/out/cat_3cfg_x2seed_cpu/label_mapping.csv",
+    ),
+
     ModelSpec(
         name="Old_LGBM",
         oof_path="out/result11(536)/oof_proba_lgbm_weighted.npy",

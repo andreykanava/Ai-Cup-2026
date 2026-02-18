@@ -84,21 +84,21 @@ def train_single_seed(seed, X_train, y, X_test, cat_idx, n_classes):
             iterations=5000,
             learning_rate=0.03,
             depth=6,
+            rsm=0.85,
 
             l2_leaf_reg=15.0,
-            min_data_in_leaf=20,
+            min_data_in_leaf=40,
 
             bootstrap_type="Bayesian",
-            bagging_temperature=1.0,
-            random_strength=1.5,
-
+            bagging_temperature=0.3,
+            random_strength=0.5,
 
             random_seed=seed,
 
             od_type="Iter",
             od_wait=200,
 
-            task_type="GPU",
+            task_type="CPU",
             thread_count=-1,
 
             verbose=200,
